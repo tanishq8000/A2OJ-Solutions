@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+
+int32_t main() {
+    int tst;
+    cin>>tst;
+    while(tst--)
+    {
+        int a; cin >> a;
+		cout << (360 % (180-a) == 0 ? "YES" : "NO") << endl;
+    }
+    return 0;
+}
