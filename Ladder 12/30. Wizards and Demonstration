@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+
+int32_t main() {
+	int n,x,y;
+	cin>>n>>x>>y;
+	
+	double d = ((double)y/100.00) * (double)(n);
+	int demon = ceil(d);
+	
+	if(demon>x) cout<<demon-x<<endl;
+	else cout<<0<<endl;
+	
+	return 0;
+}
