@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+ 
+string sumOfDig(string num){
+    int sum = 0;
+    for(auto x:num){
+        sum += (x-'0');
+    }
+    return to_string(sum);
+}
+ 
+int32_t main() {
+	string n;
+	cin>>n;
+	
+	int ans = 0;
+	while(n.length()>1)
+	{
+	    n = sumOfDig(n);
+	    ans++;
+	}
+	cout<<ans<<endl;
+	return 0;
+}
