@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+
+int32_t main() {
+	int l,r;
+	cin>>l>>r;
+	queue<int> q;
+	q.push(4);
+	q.push(7);
+	
+	int i = l,s=0;
+	
+	while(i<=r){
+	    //cout<<i<<endl;
+	    if(i <= q.front()){
+	        //cout<<" adding for "<<i<<" is "<<q.front()<<endl;
+	        s += q.front();
+	        i++;
+	    }
+	    else{
+	        q.push((q.front()*10)+4);
+	        q.push((q.front()*10)+7);
+	        q.pop();
+	        if(i <= q.front())
+	        {
+	            //cout<<" adding for "<<i<<" is "<<q.front()<<endl;
+	            s += q.front();
+	            i++;
+	        }
+	    }
+	}
+	
+	cout<<s<<endl;
+	return 0;
+}
