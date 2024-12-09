@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+
+int32_t main() {
+    int n,m;
+    cin>>n>>m;
+    vector<vector<char>> arr(n,vector<char>(m));
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cin>>arr[i][j];
+        }
+    }
+    
+    int ans = 0;
+    
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            if(arr[i][j] == 'W'){
+                if(i >= 1 && arr[i-1][j] == 'P'){
+                    arr[i-1][j] = '.';
+                    ans++;
+                }
+                else if(j<m-1 && arr[i][j+1]=='P'){
+                    arr[i][j+1] = '.';
+                    ans++;
+                }
+                else if(i<n-1 && arr[i+1][j] == 'P'){
+                    arr[i+1][j] = '.';
+                    ans++;
+                }
+                else if(j>0 && arr[i][j-1] == 'P'){
+                    arr[i][j-1] = '.';
+                    ans++;
+                }
+            }
+        }
+    }
+    
+    cout<<ans<<endl;
+    return 0;
+}
