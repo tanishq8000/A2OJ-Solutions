@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int 
+
+int32_t main() {
+    int n,m;
+    cin>>n>>m;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    
+    int currInc = 0;
+    
+    for(int i=0;i<m;i++){
+        int op;
+        cin>>op;
+        
+        if(op == 1){
+            int v,x;
+            cin>>v>>x;
+            
+            arr[v-1] = x-currInc;
+        }
+        else if(op == 2){
+            int y;
+            cin>>y;
+            currInc += y;
+        }
+        else{
+            int q;
+            cin>>q;
+            cout<<arr[q-1]+currInc<<endl;
+        }
+    }
+    
+    return 0;
+}
