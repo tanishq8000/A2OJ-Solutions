@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+
+int32_t main() {
+    int a,b,c;
+    cin>>a>>b>>c;
+    
+    int val1 = a+b-c;
+    int val2 = b+c-a;
+    int val3 = a+c-b;
+    
+    if(val1%2 == 1 || val2%2==1 || val3%2==1 || val1<0 || val2<0 || val3<0){
+        cout<<"Impossible"<<endl;
+    }
+    else{
+        cout<<val1/2<<" "<<val2/2<<" "<<val3/2<<endl;
+    }
+    
+    return 0;
+}
