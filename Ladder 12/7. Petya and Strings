@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long int
+ 
+int32_t main()
+{
+    char a[102],b[102];
+    cin>>a;
+    cin>>b;
+    cout<<stricmp(a,b)<<endl;
+    return 0;
+}
