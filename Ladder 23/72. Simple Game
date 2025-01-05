@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+ 
+int32_t main() {
+    int n,m;
+    cin>>n>>m;
+    
+    int right = n-m;
+    int left = n - right-1;
+    
+    if(left >= right){
+        if(m>1){
+            cout<<m-1<<endl;
+        }
+        else{
+            cout<<m<<endl;
+        }
+    }
+    else{
+        if(m < n){
+            cout<<m+1<<endl;
+        }
+        else{
+            cout<<m<<endl;
+        }
+    }
+    
+    return 0;
+}
