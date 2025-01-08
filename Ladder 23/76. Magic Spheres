@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+
+int32_t main() {
+    int a,b,c;
+    cin>>a>>b>>c;
+    int x,y,z;
+    cin>>x>>y>>z;
+    
+    int exBl = 0,exVi = 0,exOr=0;
+    int req = 0;
+    
+    if(a > x){
+        exBl += (a-x);
+    }
+    else{
+        req = (x-a);
+    }
+    
+    if(b > y){
+        exVi += (b-y);
+    }
+    else{
+        req += (y-b);
+    }
+    
+    if(c > z){
+        exOr += (c-z);
+    }
+    else{
+        req += (z-c);
+    }
+    
+    if(req == 0){
+        cout<<"Yes"<<endl;
+        return 0;
+    }
+    
+    int canMade = (exOr/2) + (exVi/2) + (exBl/2);
+    
+    if(canMade >= req){
+        cout<<"Yes"<<endl;
+    }
+    else{
+        cout<<"No"<<endl;
+    }
+    
+    return 0;
+}
