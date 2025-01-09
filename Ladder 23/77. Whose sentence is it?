@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+#define int long long int
+
+int32_t main() {
+    int tst;
+    cin >> tst;
+    cin.ignore();
+
+    for (int t = 0; t < tst; t++) {
+        string str;
+        getline(cin, str);
+
+        //cout << str << endl;
+
+        string pre = "", suf = "";
+
+        int n = str.length();
+        for (int i = 0; i < 5 && i < n; i++) {
+            pre += str[i];
+        }
+
+        for (int i = n - 1; i >= 0 && i >= n - 5; i--) {
+            suf = str[i] + suf;
+        }
+        
+        //cout<<suf<<endl;
+        
+        if (pre == "miao." && suf == "lala.") 
+        {
+            cout << "OMG>.< I don't know!" << endl;
+        } 
+        else if (pre != "miao." && suf != "lala.") {
+            cout << "OMG>.< I don't know!" << endl;
+        } 
+        else if (pre == "miao.") 
+        {
+            cout << "Rainbow's" << endl;
+        } 
+        else if (suf == "lala.") 
+        {
+            cout << "Freda's" << endl;
+        }
+    }
+    return 0;
+}
