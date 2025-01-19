@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+
+int32_t main() {
+    int n;
+    cin>>n;
+    int t = 0;
+    int currHeight = 0;
+    for(int i=0;i<n;i++){
+        int h;
+        cin>>h;
+        
+        t += abs(currHeight-h);
+        currHeight = h;
+        t++;
+        if(i < n-1){
+            t++;
+        }
+    }
+    
+    cout<<t<<endl;
+    return 0;
+}
