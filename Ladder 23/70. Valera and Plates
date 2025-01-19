@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+
+int32_t main() {
+    int n,m,k;
+    cin>>n>>m>>k;
+    
+    int wash = 0;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        if(arr[i] == 1){
+            if(m > 0){
+                m--;
+            }
+            else{
+                wash++;
+            }
+        }
+        else{
+            if(k > 0){
+                k--;
+            }
+            else if(m > 0){
+                m--;
+            }
+            else{
+                wash++;
+            }
+        }
+    }
+    
+    cout<<wash<<endl;
+    return 0;
+}
